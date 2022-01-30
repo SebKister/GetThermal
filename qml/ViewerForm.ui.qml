@@ -28,11 +28,7 @@ Item {
         spacing: 0
         anchors.fill: parent
 
-        CameraControls {
-            Layout.minimumWidth: 240
-            Layout.fillHeight: true
-            acq: acq
-        }
+    
 
         Pane {
             x: 220
@@ -48,13 +44,7 @@ Item {
                 anchors.fill: parent
                 fillMode: VideoOutput.PreserveAspectFit
                 source: player
-                VideoRoi {
-                    id: radRoi
-                    visible: acq.cci.supportsRadiometry
-                    acq: acq
-                    anchors.horizontalCenter: parent.horizontalCenter
-                    anchors.verticalCenter: parent.verticalCenter
-                }
+               
             }
         }
 
@@ -62,23 +52,15 @@ Item {
 
 
         Pane {
-            width: 130
-            Layout.minimumWidth: 130
+            width: 40
+            Layout.minimumWidth: 40
             Layout.fillHeight: true
             visible: acq.cci.supportsRadiometry
 
-            SpotInfo {
-                id: spotInfo
-                anchors.top: parent.top
-                anchors.left: parent.left
-                anchors.right: parent.right
-                acq: acq
-                farenheitTemps: rangeDisplay.farenheitTemps
-            }
-
+        
             RangeDisplay {
                 id: rangeDisplay
-                anchors.top: spotInfo.bottom
+                anchors.top: parent.top
                 anchors.left: parent.left
                 anchors.right: parent.right
                 anchors.bottom: parent.bottom

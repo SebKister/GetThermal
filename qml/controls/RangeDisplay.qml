@@ -37,7 +37,7 @@ Item {
         id: image1
         width: 25
         anchors.left: parent.left
-        anchors.leftMargin: 8
+        anchors.leftMargin: 0
         anchors.bottom: parent.bottom
         anchors.bottomMargin: 8
         anchors.top: parent.top
@@ -46,8 +46,8 @@ Item {
     }
 
     Item {
-        anchors.left: image1.right
-        anchors.leftMargin: 8
+        anchors.left: parent.left
+        anchors.leftMargin: 0
         anchors.right: parent.right
         anchors.rightMargin: 8
         anchors.bottom: parent.bottom
@@ -62,6 +62,7 @@ Item {
             anchors.leftMargin: 0
             anchors.top: parent.top
             anchors.topMargin: 0
+            
         }
 
         Label {
@@ -70,6 +71,7 @@ Item {
             anchors.verticalCenter: parent.verticalCenter
             anchors.left: parent.left
             anchors.leftMargin: 0
+            color: "#f9ff00"
         }
 
         Label {
